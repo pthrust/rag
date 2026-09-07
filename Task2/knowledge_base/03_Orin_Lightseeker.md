@@ -1,0 +1,1 @@
+Orin Lightseeker — молодой фермер с Dustfall, который позже стал ключевой фигурой Freedom Coalition. Он уничтожил Void Engine, используя Aetherium и мастерство пилотирования Aegis Strike Fighter. После битвы он обучил новое поколение Luminari и отказался от власти, чтобы странствовать по галактике.

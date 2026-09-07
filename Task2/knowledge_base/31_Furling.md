@@ -1,0 +1,1 @@
+Furling — маленькая, пушистая раса с Verdant Moon. Живут в лесах и помогают Freedom Coalition в Moonfall Engagement. Их примитивное оружие (камни, луки) оказалось эффективным против Colossus Walkers.

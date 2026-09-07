@@ -1,0 +1,1 @@
+Kaelen Stormrider был могущественным Luminari, известным своим мастерством управления Aetherium. Родился на Dustfall, он был рабом, но позже стал героем Freedom Coalition. Его путь к тёмной стороне начался после видений гибели его возлюбленной, Queen Seraphine. В конце концов он превратился в Vorlag the Dread — самого жестокого полководца Imperium Dominus.

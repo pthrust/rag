@@ -1,0 +1,1 @@
+Финальная битва на Verdant Moon. Orin сразился с Vorlag the Dread. Vorlag раскрыл, что он — отец Orin'а, и пожертвовал собой, чтобы убить Supreme Arbiter Malachor. В итоге Imperium пала, и была провозглашена новая Stellar Concord.

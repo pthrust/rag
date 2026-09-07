@@ -1,0 +1,1 @@
+Elara Voss — лидер Freedom Coalition, харизматичная дипломатка с Verdant Prime. Она организовала базу повстанцев на Jungle Haven и была спасена Orin'ом с Void Engine. После падения Imperium она стала первым канцлером новой Stellar Concord.

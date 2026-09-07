@@ -1,0 +1,1 @@
+Rylan Stark — контрабандист и капитан корабля Shadow Runner. Сначала работал на Mogul the Slug, но позже присоединился к Freedom Coalition. Его циничный юмор и преданность друзьям сделали его легендой. Участвовал в Glacier Siege и Moonfall Engagement.
