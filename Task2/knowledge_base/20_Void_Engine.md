@@ -1,1 +1,1 @@
-Void Engine — супероружие Imperium, станция размером с луну. Способна уничтожать целые планеты сфокусированным энергетическим лучом. Единственная уязвимость — тепловой реактор, доступ к которому возможен через узкий туннель. Уничтожена Orin'ом.
+Void Engine — a superweapon of Imperium, a moon‑sized station. Can destroy entire planets with a focused energy beam. Its only weakness is the thermal reactor, accessible through a narrow exhaust tunnel. Destroyed by Orin.

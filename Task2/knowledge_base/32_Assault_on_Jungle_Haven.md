@@ -1,1 +1,1 @@
-Первая крупная победа Freedom Coalition. Используя тактику малых кораблей, повстанцы уничтожили Void Engine. Orin Lightseeker, управляя Aegis Strike Fighter, запустил торпеду в тепловой реактор, что вызвало цепную реакцию и уничтожило станцию.
+The first major victory of the Freedom Coalition. Using small‑craft tactics, the rebels destroyed the Void Engine. Orin Lightseeker, piloting an Aegis Strike Fighter, launched a torpedo into the thermal reactor, causing a chain reaction that destroyed the station.

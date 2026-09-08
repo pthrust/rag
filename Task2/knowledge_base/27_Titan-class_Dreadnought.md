@@ -1,1 +1,1 @@
-Titan-class Dreadnought — линкор Imperium, длиной более километра. Вооружён десятками Ion Projector и способен нести штурмовые отряды. Являлся флагманом флота Malachor'а.
+Titan‑class Dreadnought — an Imperium battleship over a kilometre long. Armed with dozens of Ion Projectors and capable of carrying assault troops. Served as the flagship of Malachor's fleet.

@@ -1,1 +1,1 @@
-Jaxx — наёмный убийца, работавший на Malachor'а. Носит потрёпанный плащ и всегда выполняет контракты. Пытался поймать Orin'а, но был побеждён. Позже стал независимым охотником за головами.
+Jaxx — a bounty hunter who worked for Malachor. Wears a tattered cloak and always fulfils contracts. Tried to capture Orin but was defeated. Later became an independent hunter.

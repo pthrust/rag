@@ -1,1 +1,1 @@
-Секретный приказ Supreme Arbiter Malachor уничтожить всех Luminari. Солдаты Imperium пошли по галактике, убивая Luminari и их учеников. Выжили лишь немногие, скрывавшиеся в отдалённых мирах.
+A secret order from Supreme Arbiter Malachor to exterminate all Luminari. Imperium soldiers swept through the galaxy, killing Luminari and their apprentices. Only a few survived, hiding in distant worlds.

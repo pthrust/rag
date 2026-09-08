@@ -1,1 +1,1 @@
-City-Core — столичная планета Imperium, покрытая мегаполисом высотой в сотни уровней. Здесь находился трон Malachor'а. После падения империи стала центром новой Stellar Concord.
+City-Core — the capital planet of Imperium, covered by a mega‑city hundreds of levels high. Here stood Malachor's throne. After the empire fell, it became the centre of the new Stellar Concord.

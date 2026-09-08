@@ -1,1 +1,1 @@
-Shadow Runner — модифицированный грузовой корабль, принадлежащий Rylan'у. Небольшой, юркий, способен развивать высокую скорость. Имеет скрытые отсеки для контрабанды. Участвовал в битвах на Jungle Haven и Verdant Moon.
+Shadow Runner — a modified freighter owned by Rylan. Small, agile, capable of high speed. Has hidden compartments for smuggling. Participated in battles at Jungle Haven and Verdant Moon.

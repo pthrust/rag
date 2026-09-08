@@ -1,1 +1,1 @@
-Azure Sphere — водная планета, населённая амфибиями. Здесь Queen Seraphine правила до своего убийства. На планету вторглись силы Imperium, что вызвало войну.
+Azure Sphere — a water planet inhabited by amphibians. Here Queen Seraphine ruled until her assassination. Imperium forces invaded the planet, sparking war.

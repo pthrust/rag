@@ -1,1 +1,1 @@
-Cinder — вулканическая планета, где Kaelen Stormrider превратился в Vorlag the Dread. Поверхность покрыта лавовыми реками и токсичной атмосферой. Здесь произошла дуэль между Master Kael и Vorlag'ом.
+Cinder — a volcanic planet where Kaelen Stormrider became Vorlag the Dread. The surface is covered by lava rivers and a toxic atmosphere. Here took place the duel between Master Kael and Vorlag.

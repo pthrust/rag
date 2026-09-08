@@ -1,1 +1,1 @@
-Photon Blade — энергетическое оружие Luminari и Shadow Cabal. Генерирует лезвие плазмы длиной около метра. Цвет зависит от кристалла внутри: синий (Luminari), красный (Shadow Cabal), зелёный (мастера), фиолетовый (редкость). Оружие может отражать выстрелы Ion Projector.
+Photon Blade — an energy weapon of the Luminari and Shadow Cabal. Generates a plasma blade about one meter long. Colour depends on the internal crystal: blue (Luminari), red (Shadow Cabal), green (masters), purple (rare). The weapon can deflect Ion Projector shots.

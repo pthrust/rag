@@ -1,1 +1,1 @@
-Verdant Prime — цветущая планета, родной мир Elara Voss. Была разрушена Void Engine в демонстрационном акте. Это событие подтолкнуло многие миры к вступлению в Freedom Coalition.
+Verdant Prime — a blooming planet, home world of Elara Voss. It was destroyed by the Void Engine as a demonstration. This event pushed many worlds to join the Freedom Coalition.

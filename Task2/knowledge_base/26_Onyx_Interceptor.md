@@ -1,1 +1,1 @@
-Onyx Interceptor — истребитель Imperium с двумя солнечными панелями. Скоростной, но слабо бронированный. Часто используется в массовых атаках.
+Onyx Interceptor — an Imperium starfighter with two solar panels. Fast but lightly armoured. Often used in mass attacks.

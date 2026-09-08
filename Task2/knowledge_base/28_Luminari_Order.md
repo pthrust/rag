@@ -1,1 +1,1 @@
-Luminari Order — древний орден миротворцев, владеющих Aetherium. Они защищали Stellar Concord на протяжении тысячелетий. После Edict of Annihilation почти все были уничтожены, но выжившие возродили орден при Orin'е.
+Luminari Order — an ancient order of peacekeepers who wield Aetherium. They protected the Stellar Concord for millennia. After the Edict of Annihilation, almost all were destroyed, but survivors revived the order under Orin.

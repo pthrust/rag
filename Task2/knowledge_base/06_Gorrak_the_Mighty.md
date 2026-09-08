@@ -1,1 +1,1 @@
-Gorrak — Ursan, верный друг Rylan'a. Высокий, покрытый шерстью, обладает огромной силой. Служит механиком и телохранителем на Shadow Runner. Участвовал во всех ключевых битвах повстанцев.
+Gorrak — an Ursan, Rylan's faithful friend. Tall, covered in fur, possesses immense strength. Serves as mechanic and bodyguard on the Shadow Runner. Took part in all key rebel battles.

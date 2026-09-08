@@ -1,1 +1,1 @@
-Zorrin — мудрый Luminari-отшельник, живший на болотах Misty Marsh. Он обучал Orin'а секретам Aetherium и предсказал падение Imperium. Его слова: «Размер не имеет значения, важна воля».
+Zorrin — a wise Luminari hermit who lived in the swamps of Misty Marsh. He taught Orin the secrets of Aetherium and predicted the fall of Imperium. His words: "Size matters not, only will." 

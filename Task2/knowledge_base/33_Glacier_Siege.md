@@ -1,1 +1,1 @@
-Imperium атаковала базу повстанцев на Glacier. Битва шла в снегах, использовались Colossus Walkers. Freedom Coalition едва спаслась, но потеряла много бойцов. Это привело к временному отступлению на Verdant Moon.
+Imperium attacked the rebel base on Glacier. The battle was fought in snow, with Colossus Walkers deployed. The Freedom Coalition barely escaped but lost many fighters. This led to a temporary retreat to Verdant Moon.

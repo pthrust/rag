@@ -1,1 +1,1 @@
-Dustfall — пустынная планета с двумя солнцами. Домашний мир Orin'а и Kaelen'а. Здесь находился порт Port Scum — пристанище контрабандистов и преступников. Под поверхностью скрываются древние Luminari-руины.
+Dustfall — a desert planet with two suns. Home world of Orin and Kaelen. Here lies Port Scum — a haven for smugglers and criminals. Beneath the surface hide ancient Luminari ruins.

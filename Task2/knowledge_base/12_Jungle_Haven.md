@@ -1,1 +1,1 @@
-Jungle Haven — планета, покрытая густыми джунглями. Служила главной базой Freedom Coalition. Здесь состоялась решающая битва, в результате которой был уничтожен Void Engine.
+Jungle Haven — a planet covered in dense jungles. Served as the main base of the Freedom Coalition. Here took place the decisive battle that resulted in the destruction of the Void Engine.

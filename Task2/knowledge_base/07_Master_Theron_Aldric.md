@@ -1,1 +1,1 @@
-Theron Aldric — старый Luminari, наставник Orin'а. Пережил Edict of Annihilation и скрывался на Dustfall. Научил Orin'а управлять Aetherium и передал ему Photon Blade. Пожертвовал собой, чтобы спасти своих учеников от Vorlag the Dread.
+Theron Aldric — an old Luminari, Orin's mentor. Survived the Edict of Annihilation and hid on Dustfall. Taught Orin to control Aetherium and gave him the Photon Blade. Sacrificed himself to save his students from Vorlag the Dread.

@@ -1,1 +1,1 @@
-Shadow Cabal — тайное общество, использующее тёмную сторону Aetherium. Стремятся к власти и контролю. Их глава — Supreme Arbiter Malachor. Они уничтожили Luminari Order и установили Imperium.
+Shadow Cabal — a secret society that uses the dark side of Aetherium. They seek power and control. Their leader is Supreme Arbiter Malachor. They destroyed the Luminari Order and established Imperium.

@@ -1,1 +1,1 @@
-Glacier — ледяная планета, использовавшаяся как временное убежище повстанцев после потери Jungle Haven. Imperium нашла их с помощью зондов, что привело к Glacier Siege.
+Glacier — an ice planet used as a temporary rebel hideout after the loss of Jungle Haven. Imperium found them using probes, leading to the Glacier Siege.

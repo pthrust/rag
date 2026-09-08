@@ -1,1 +1,1 @@
-Misty Marsh — болотистая планета, скрытая от глаз Imperium. Здесь Elder Zorrin обучал Orin'а. Место полно опасных существ и древних тайн Aetherium.
+Misty Marsh — a swampy planet hidden from Imperium's eyes. Here Elder Zorrin taught Orin. The place is full of dangerous creatures and ancient Aetherium secrets.
