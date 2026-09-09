@@ -16,7 +16,7 @@
 ```
 python -m venv ~/rag
 source ~/rag/bin/activate
-pip install langchain langchain-community faiss-cpu sentence-transformers
+pip install langchain langchain-ollama langchain-huggingface langchain-community faiss-cpu sentence-transformers
 python build_index.py
 
 [+] Loading documents from knowledge_base/ ...
