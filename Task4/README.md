@@ -65,7 +65,6 @@ llama3.1:8b    46e0c10c039e    4.9 GB    14 minutes ago
 ```
 python rag_bot.py
 
-python rag_bot.py 
 🚀 RAG-бот (Llama-3.1-8B) запущен. Введите 'exit' для выхода.
 
 Ваш вопрос: Who is Anakin Skywalker
@@ -113,4 +112,12 @@ python rag_bot.py
 2. В документе 2 говорится, что после обнаружения базы Imperium атаковали ее и уничтожили в ходе Glacier Siege.
 
 Следовательно, ответ: Империя.
+```
+
+# Запуска бота + post фильтрация + результаты ответов
+
+```bash
+python rag_bot.py --post-filter
+
+
 ```
