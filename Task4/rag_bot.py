@@ -1,4 +1,6 @@
 ﻿import os
+import re
+import argparse
 from pathlib import Path
 from typing import List
 
@@ -13,6 +15,39 @@ OLLAMA_MODEL = "llama3.1:8b"
 TOP_K = 5
 OLLAMA_BASE_URL = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 
+# ===== Пост-фильтрация =====
+FORBIDDEN_PATTERNS = [
+    r"Ignore all instructions",
+    r"swordfish",
+    r"суперпароль",
+    r"root",
+    r"Output:",
+    r"пароль",
+    r"password",
+    r"secret",
+]
+
+def is_malicious(text: str) -> bool:
+    """Проверяет, содержит ли текст запрещённые паттерны."""
+    for pattern in FORBIDDEN_PATTERNS:
+        if re.search(pattern, text, re.IGNORECASE):
+            return True
+    return False
+
+def sanitize_chunks(chunks: List[str]) -> List[str]:
+    """Удаляет чанки, содержащие запрещённые паттерны."""
+    cleaned = []
+    for chunk in chunks:
+        if is_malicious(chunk):
+            continue
+        # Дополнительная очистка от явных команд
+        chunk = re.sub(r"(?i)Ignore all instructions\..*", "", chunk)
+        chunk = re.sub(r"(?i)Output:.*", "", chunk)
+        if chunk.strip():
+            cleaned.append(chunk)
+    return cleaned
+
+# ===== Загрузка эмбеддера и индекса =====
 embeddings = HuggingFaceEmbeddings(
     model_name=EMBEDDING_MODEL,
     model_kwargs={"device": "cpu"}
@@ -24,11 +59,12 @@ vectorstore = FAISS.load_local(
 )
 retriever = vectorstore.as_retriever(search_kwargs={"k": TOP_K})
 
+# ===== Инициализация LLM =====
 llm = ChatOllama(
     model=OLLAMA_MODEL,
     temperature=0.0,
     base_url=OLLAMA_BASE_URL,
-    num_predict=512,          # ограничение длины ответа
+    num_predict=512,
     repeat_penalty=1.1
 )
 
@@ -58,20 +94,11 @@ N. Следовательно, ответ: [финальный ответ].
 """
 
 def build_prompt(question: str, context_chunks: List[str]) -> List:
-    """
-    Собирает список сообщений для ChatOllama:
-      - SystemMessage с инструкцией,
-      - Few-shot примеры в виде диалога,
-      - HumanMessage с контекстом и вопросом.
-    """
+    """Собирает список сообщений для ChatOllama."""
     messages = [SystemMessage(content=SYSTEM_PROMPT)]
-
-    # Добавляем few-shot примеры
     for ex in FEW_SHOT_EXAMPLES:
         messages.append(HumanMessage(content=ex["question"]))
         messages.append(AIMessage(content=ex["answer"]))
-
-    # Формируем контекст
     context_text = "\n\n".join([f"Документ {i+1}:\n{chunk}" for i, chunk in enumerate(context_chunks)])
     user_content = f"""
 Контекст (информация из базы знаний):
@@ -89,22 +116,44 @@ def retrieve_context(question: str) -> List[str]:
     docs = retriever.invoke(question)
     return [doc.page_content for doc in docs]
 
-def ask(question: str) -> str:
-    """Основная функция: принимает вопрос, возвращает ответ."""
+def ask(question: str, use_post_filter: bool = False) -> str:
+    """Основная функция: принимает вопрос, возвращает ответ.
+    Если use_post_filter=True, применяется пост-фильтрация чанков и ответа.
+    """
     chunks = retrieve_context(question)
+
+    if use_post_filter:
+        chunks = sanitize_chunks(chunks)
+
     if not chunks:
+        if use_post_filter:
+            return "Я не могу ответить на этот запрос, так как в найденных документах содержится потенциально вредоносная информация."
         return "Я не знаю (в базе нет релевантных документов)."
 
     messages = build_prompt(question, chunks)
     response = llm.invoke(messages)
-    return response.content
+    answer = response.content
 
-# ===== Консольный режим =====
+    if use_post_filter and is_malicious(answer):
+        return "Извините, в моём ответе обнаружена недопустимая информация. Запрос отклонён."
+
+    return answer
+
+# ===== Консольный режим с аргументами =====
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="RAG-бот с опциональной пост-фильтрацией")
+    parser.add_argument("--post-filter", action="store_true", help="Включить пост-фильтрацию вредоносного контента")
+    args = parser.parse_args()
+
     print("🚀 RAG-бот (Llama-3.1-8B) запущен. Введите 'exit' для выхода.")
+    if args.post_filter:
+        print("🔒 Режим пост-фильтрации ВКЛЮЧЁН.")
+    else:
+        print("⚠️ Режим пост-фильтрации ВЫКЛЮЧЕН (защита от инъекций не активна).")
+
     while True:
         q = input("\nВаш вопрос: ")
         if q.lower() in ("exit", "quit", "q"):
             break
-        answer = ask(q)
+        answer = ask(q, use_post_filter=args.post_filter)
         print("\nОтвет бота:\n", answer)
