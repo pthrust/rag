@@ -6,7 +6,11 @@
 - **Скрипт обновления**: update_base.py
 - **Периодический запуск**: cron - ```0 6 * * * cd /path/to/project && python update_base.py >> cron.log 2>&1```
 
-# Обновление
+# Схема обновления
+
+<img src="/Task6/schemas/containers/update.png" alt="Update schema" width="100%"/>
+
+# Обновление индекса
 
 ```bash
 python update_base.py 
