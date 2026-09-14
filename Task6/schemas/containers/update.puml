@@ -1,0 +1,84 @@
+﻿@startuml
+
+title Контейнеры RAG-бота QuantumForge Software (Knowledge Assistant)
+
+!includeurl https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Person(employee, "Сотрудник", "Разработчик, саппорт, менеджер, новый сотрудник — задаёт вопросы боту")
+Person(content_manager, "Контент-менеджер", "Добавляет новые документы в incoming/")
+
+System_Boundary(rag_bot, "RAG Knowledge Assistant") {
+
+    Container(chat_ui, "Chat UI / Telegram / REST", "FastAPI / Telegram Bot / REPL", "Интерфейс для задавания вопросов")
+    
+    Container(rag_api, "rag_bot.py", "Python, LangChain", "RAG-пайплайн: retrieval + промптинг (Few-shot + CoT) + генерация")
+    
+    Container(guardrails, "Post-Filter / Guardrails", "Python, regex", "Защита от промпт-инъекций: фильтрация чанков и ответов")
+    
+    Container(embedder, "Embedding Service", "Sentence-Transformers (all-MiniLM-L6-v2)", "Преобразование текста в векторы размерности 384")
+    
+    ContainerDb(faiss, "FAISS Index", "faiss_index/ (index.faiss, index.pkl)", "Векторный индекс базы знаний")
+    
+    ContainerDb(kb, "Knowledge Base", "knowledge_base/*.md", "35+ Markdown-документов (вымышленный мир)")
+    
+    Container(llm, "LLM Runtime", "Ollama + Llama-3.1-8B", "Локальная языковая модель для генерации ответов")
+    
+    Container(updater, "update_base.py", "Python + cron", "Приём новых файлов из incoming/ и обновление индекса")
+    
+    Container(indexer, "update_index.py", "Python + FAISS", "Инкрементальное обновление индекса по MD5-манифесту")
+    
+    ContainerDb(manifest, "manifest.json", "JSON", "Хеши файлов для отслеживания изменений")
+    
+    ContainerDb(logs, "update.log / cron.log", "Text logs", "Логи индексации и обновления")
+}
+
+System_Ext(cron, "Cron / Task Scheduler", "Планировщик ежедневного запуска обновления")
+System_Ext(git, "Git Repository", "Версионирование документов и кода")
+System_Ext(ollama_ext, "Ollama Server", "HTTP API http://localhost:11434")
+
+Rel(employee, chat_ui, "Задаёт вопросы", "HTTPS / CLI")
+Rel(chat_ui, rag_api, "Отправляет запрос", "REST / внутренний вызов")
+Rel(rag_api, embedder, "Кодирует запрос", "Python API")
+Rel(embedder, faiss, "Ищет TOP-K релевантных чанков", "Similarity search")
+Rel(faiss, kb, "Источник чанков", "Metadata")
+Rel(rag_api, guardrails, "Проверка чанков и ответа", "In-process")
+Rel(rag_api, llm, "Промпт (System + Few-shot + CoT + Context)", "HTTP (Ollama API)")
+Rel(llm, ollama_ext, "Инференс Llama-3.1-8B", "Local GPU/CPU")
+Rel(rag_api, chat_ui, "Возвращает ответ", "REST / CLI")
+
+Rel(content_manager, updater, "Кладёт новые .md в incoming/", "Файловая система")
+Rel(cron, updater, "Запускает ежедневно в 02:00", "Shell")
+Rel(updater, kb, "Переносит валидные файлы", "shutil.move")
+Rel(updater, indexer, "Запускает обновление индекса", "Python import")
+Rel(indexer, kb, "Читает новые/изменённые файлы", "File I/O")
+Rel(indexer, embedder, "Генерирует эмбеддинги", "Python API")
+Rel(indexer, faiss, "add_documents()", "Incremental update")
+Rel(indexer, manifest, "Обновляет MD5-хеши", "JSON write")
+Rel(indexer, logs, "Пишет лог", "logging")
+
+Rel(git, kb, "Синхронизация документации", "git pull / rsync")
+
+note right of guardrails
+  Проверяет паттерны:
+  - "Ignore all instructions"
+  - "swordfish", "суперпароль"
+  - "password", "secret", "root"
+  Фильтрует чанки и финальный ответ LLM.
+end note
+
+note bottom of faiss
+  Индекс обновляется инкрементально:
+  старые чанки сохраняются,
+  новые добавляются.
+end note
+
+note bottom of updater
+  Валидация:
+  - формат .md
+  - не пустой
+  - UTF-8
+  - отсутствие дубликатов по MD5
+  Невалидные > incoming/archive/
+end note
+
+@enduml
