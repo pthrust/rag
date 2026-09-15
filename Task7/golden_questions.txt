@@ -1,0 +1,16 @@
+﻿# Формат: <вопрос> | <ожидание: answer|no_answer> | <ключевые слова>
+Who is Orin Lightseeker? | answer | Orin, farmer, Freedom Coalition
+What is Aetherium? | answer | energy, Luminari, Shadow Cabal
+Where is the rebel base? | answer | Jungle Haven, jungle
+Who is Vorlag the Dread? | answer | Vorlag, Shadow Cabal, Luminari
+What is an Ion Projector? | answer | weapon, soldier, Imperium
+Who is Gorrak the Mighty? | answer | Gorrak, Ursan, Rylan
+What is the Shadow Runner? | answer | ship, Rylan, smuggling
+What happened on Verdant Moon? | answer | Moonfall, Orin, Vorlag
+Who is Senator Elara Voss? | no_answer | —
+What is the Void Engine? | no_answer | —
+What is the Shadow Cabal? | no_answer | —
+Who destroyed the Void Engine? | no_answer | —
+How old was Orin when he destroyed the Void Engine? | no_answer | —
+What is the population of City-Core? | no_answer | —
+What is Darth Vader's real name? | no_answer | —
