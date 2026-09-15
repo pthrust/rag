@@ -1,0 +1,1 @@
+Glacier — an ice planet used as a temporary rebel hideout after the loss of Jungle Haven. Imperium found them using probes, leading to the Glacier Siege.

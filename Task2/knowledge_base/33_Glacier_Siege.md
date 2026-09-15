@@ -1,0 +1,1 @@
+Imperium attacked the rebel base on Glacier. The battle was fought in snow, with Colossus Walkers deployed. The Freedom Coalition barely escaped but lost many fighters. This led to a temporary retreat to Verdant Moon.

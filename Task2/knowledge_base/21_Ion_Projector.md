@@ -1,0 +1,1 @@
+Ion Projector — standard handheld weapon that fires charged particles. Used by both Imperium soldiers and rebels. Comes in various models: from pistols to heavy rifles.

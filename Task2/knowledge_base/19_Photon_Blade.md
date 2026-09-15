@@ -1,0 +1,1 @@
+Photon Blade — an energy weapon of the Luminari and Shadow Cabal. Generates a plasma blade about one meter long. Colour depends on the internal crystal: blue (Luminari), red (Shadow Cabal), green (masters), purple (rare). The weapon can deflect Ion Projector shots.

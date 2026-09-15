@@ -1,0 +1,1 @@
+Colossus Walker — a four‑legged battle machine of Imperium, 20 metres tall. Armed with laser cannons. Vulnerable to air attacks and infantry using cables. Was used in the Glacier Siege.

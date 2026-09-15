@@ -1,0 +1,1 @@
+Zorrin — a wise Luminari hermit who lived in the swamps of Misty Marsh. He taught Orin the secrets of Aetherium and predicted the fall of Imperium. His words: "Size matters not, only will." 

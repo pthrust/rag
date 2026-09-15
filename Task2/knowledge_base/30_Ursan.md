@@ -1,0 +1,1 @@
+Ursan — a race of tall, hairy humanoids from the planet Woodland. Possess great strength and loyalty to friends. The legendary Ursan is Gorrak the Mighty, Rylan's friend.

@@ -1,0 +1,1 @@
+Jaxx — a bounty hunter who worked for Malachor. Wears a tattered cloak and always fulfils contracts. Tried to capture Orin but was defeated. Later became an independent hunter.

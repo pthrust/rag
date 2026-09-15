@@ -1,0 +1,1 @@
+Aegis Strike Fighter — the main starfighter of the Freedom Coalition. Has four wings forming a cross. Maneuverable and equipped with torpedoes. Thanks to this ship, Orin managed to destroy the Void Engine.

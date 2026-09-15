@@ -1,0 +1,1 @@
+Malachor — the supreme ruler of Imperium Dominus, a master of the Shadow Cabal. A schemer who seized power through deception and murder. Believed himself to be the embodiment of order. Was destroyed by Vorlag in the final battle on Verdant Moon.

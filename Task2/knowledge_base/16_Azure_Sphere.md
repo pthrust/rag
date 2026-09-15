@@ -1,0 +1,1 @@
+Azure Sphere — a water planet inhabited by amphibians. Here Queen Seraphine ruled until her assassination. Imperium forces invaded the planet, sparking war.

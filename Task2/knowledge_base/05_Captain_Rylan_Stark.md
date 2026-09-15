@@ -1,0 +1,1 @@
+Rylan Stark — smuggler and captain of the ship Shadow Runner. He initially worked for Mogul the Slug but later joined the Freedom Coalition. His cynical humour and loyalty to friends made him a legend. He participated in the Glacier Siege and the Moonfall Engagement.

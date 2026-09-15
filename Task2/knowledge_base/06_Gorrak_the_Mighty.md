@@ -1,0 +1,1 @@
+Gorrak — an Ursan, Rylan's faithful friend. Tall, covered in fur, possesses immense strength. Serves as mechanic and bodyguard on the Shadow Runner. Took part in all key rebel battles.

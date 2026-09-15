@@ -1,0 +1,1 @@
+Mechanoid — artificial intelligence used in robots. They come in combat, service, and astromechanical varieties. Some possess individuality and loyalty to their owner.

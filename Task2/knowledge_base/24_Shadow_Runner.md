@@ -1,0 +1,1 @@
+Shadow Runner — a modified freighter owned by Rylan. Small, agile, capable of high speed. Has hidden compartments for smuggling. Participated in battles at Jungle Haven and Verdant Moon.

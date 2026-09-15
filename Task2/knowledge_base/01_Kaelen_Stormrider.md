@@ -1,0 +1,1 @@
+Kaelen Stormrider was a mighty Luminari, known for his mastery of Aetherium. Born on Dustfall, he was a slave but later became a hero of the Freedom Coalition. His path to the dark side began after visions of his beloved Queen Seraphine's death. Eventually he transformed into Vorlag the Dread — the most ruthless commander of Imperium Dominus.

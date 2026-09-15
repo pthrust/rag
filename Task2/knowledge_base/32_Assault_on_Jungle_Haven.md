@@ -1,0 +1,1 @@
+The first major victory of the Freedom Coalition. Using small‑craft tactics, the rebels destroyed the Void Engine. Orin Lightseeker, piloting an Aegis Strike Fighter, launched a torpedo into the thermal reactor, causing a chain reaction that destroyed the station.

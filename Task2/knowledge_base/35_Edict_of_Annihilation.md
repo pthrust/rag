@@ -1,0 +1,1 @@
+A secret order from Supreme Arbiter Malachor to exterminate all Luminari. Imperium soldiers swept through the galaxy, killing Luminari and their apprentices. Only a few survived, hiding in distant worlds.

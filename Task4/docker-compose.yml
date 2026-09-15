@@ -1,0 +1,62 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+    environment:
+      - OLLAMA_HOST=0.0.0.0:11434
+      - OLLAMA_KEEP_ALIVE=5m
+    healthcheck:
+      test: ["CMD-SHELL", "ollama --version >/dev/null 2>&1 && ollama list >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 5s
+      start_period: 60s
+      retries: 12
+    restart: unless-stopped
+
+  model-puller:
+    image: ollama/ollama:latest
+    container_name: model-puller
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      - OLLAMA_HOST=ollama:11434
+      - LLM_MODEL=${LLM_MODEL:-llama3.1:8b}
+    volumes:
+      - ollama:/root/.ollama
+    entrypoint:
+      - /bin/sh
+      - -lc
+      - |
+        set -e
+        : "$${LLM_MODEL:=llama3.1:8b}"
+        echo "Pulling model: $${LLM_MODEL}"
+
+        for i in $$(seq 1 150); do
+          if ollama list >/dev/null 2>&1; then
+            echo "Ollama is ready"; break
+          fi
+          echo "Waiting for ollama ($$i)..."
+          sleep 2
+        done
+        ollama list >/dev/null 2>&1 || { echo "Ollama is not ready"; exit 1; }
+
+        n=0
+        until ollama pull "$${LLM_MODEL}"; do
+          n=$$((n+1))
+          if [ $$n -ge 6 ]; then
+            echo "Failed to pull $${LLM_MODEL} after $$n attempts"; exit 1
+          fi
+          delay=$$((2**$$n))
+          echo "Pull failed, retrying in $${delay}s..."
+          sleep $${delay}
+        done
+        echo "Model $${LLM_MODEL} pulled successfully"
+    restart: "no"
+
+volumes:
+  ollama:

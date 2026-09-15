@@ -1,0 +1,1 @@
+Vorlag the Dread — a dark lord of the Shadow Cabal, a former Luminari. He wears a black mechanical suit and breathes through a respirator. He is the right hand of Supreme Arbiter Malachor. Known for his cruelty and ability to wield Aetherium through anger. His apprentice was Orin Lightseeker, his own son.

@@ -1,0 +1,64 @@
+﻿@startuml
+!theme plain
+skinparam backgroundColor #FEFEFE
+
+title RAG Bot — Evaluation & Failure Points
+
+actor "QA Engineer" as QA
+participant "evaluate.py" as EVAL
+participant "rag_bot.py" as BOT
+participant "FAISS Index\n(3 файла удалены)" as FAISS
+participant "Ollama LLM\n(Llama-3.1-8B)" as LLM
+participant "logger_utils.py" as LOG
+database "logs.jsonl" as LOGDB
+database "evaluation_report.json" as REPORT
+
+QA -> EVAL : python evaluate.py
+EVAL -> EVAL : parse golden_questions.txt (15 Q)
+
+loop Для каждого вопроса
+    EVAL -> BOT : ask(question)
+    BOT -> FAISS : similarity_search(query, k=5)
+    alt Чанки найдены
+        FAISS --> BOT : TOP-K chunks + scores
+        alt score < threshold
+            BOT -> LLM : prompt(System + Few-shot + CoT + context)
+            LLM --> BOT : answer
+        else score >= threshold
+            note right of BOT
+              ⚠️ Точка сбоя:
+              нерелевантные чанки
+              → галлюцинация LLM
+            end note
+        end
+    else Чанков нет
+        FAISS --> BOT : []
+        BOT --> EVAL : "I don't know"
+    end
+
+    BOT --> EVAL : answer + chunks + scores
+    EVAL -> LOG : log_query(...)
+    LOG -> LOGDB : append JSONL
+
+    alt expected=answer & keyword_hit
+        EVAL -> EVAL : TP ✅
+    else expected=answer & !keyword_hit
+        EVAL -> EVAL : FN ❌ (MISS)
+    else expected=no_answer & !success
+        EVAL -> EVAL : TN ✅
+    else expected=no_answer & success
+        EVAL -> EVAL : FP ⚠️ (HALLUCINATION)
+        note right of EVAL
+          Сбои:
+          - остаточные упоминания
+            удалённых сущностей
+          - низкий порог релевантности
+        end note
+    end
+end
+
+EVAL -> EVAL : compute metrics\n(accuracy, precision, recall, F1)
+EVAL -> REPORT : save evaluation_report.json
+EVAL --> QA : 📊 Отчёт + рекомендации
+
+@enduml

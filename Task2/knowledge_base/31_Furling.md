@@ -1,0 +1,1 @@
+Furling — a small, furry race from Verdant Moon. They live in the forests and help the Freedom Coalition in the Moonfall Engagement. Their primitive weapons (stones, bows) proved effective against Colossus Walkers.

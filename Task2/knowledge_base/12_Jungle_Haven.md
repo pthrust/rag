@@ -1,0 +1,1 @@
+Jungle Haven — a planet covered in dense jungles. Served as the main base of the Freedom Coalition. Here took place the decisive battle that resulted in the destruction of the Void Engine.

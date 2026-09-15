@@ -1,0 +1,1 @@
+Misty Marsh — a swampy planet hidden from Imperium's eyes. Here Elder Zorrin taught Orin. The place is full of dangerous creatures and ancient Aetherium secrets.
